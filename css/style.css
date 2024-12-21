@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 header {
@@ -13,6 +14,8 @@ header {
 header h1 {
   font-size: 2em;
   font-weight: 900;
+  z-index: 2;
+  position: relative;
 }
 
 #container3D canvas {
@@ -21,11 +24,34 @@ header h1 {
   position: absolute;
   top: 0;
   left: 0;
-  pointer-events: none;
+  z-index: 1;
 }
 
 #description {
+  position: absolute;
+  top: 10%;
+  left: 5%;
   width: 30vw !important;
   padding: 2em;
-  background: #EEE;
+  background: rgba(238, 238, 238, 0.9);
+  color: #000;
+  z-index: 3;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#description p,
+#description a {
+  margin: 0.5em 0;
+  line-height: 1.5;
+}
+
+#description a {
+  color: #0073e6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#description a:hover {
+  text-decoration: underline;
 }
