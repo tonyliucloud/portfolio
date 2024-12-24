@@ -49,7 +49,7 @@ body {
 }
 
 .navbar .nav-links a:hover {
-  color: #007BFF;
+  color: #565656;
 }
 
 /* Sections */
@@ -96,6 +96,22 @@ body {
   background-color: #a4a4a4;
 }
 
+.link-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 /* Projects */
 .projects-grid {
   display: grid;
@@ -115,37 +131,6 @@ body {
 .project:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Contact Form */
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  margin-bottom: 1rem;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #007BFF;
-  color: #fff;
-  border: none;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0056b3;
 }
 
 /* Footer */
