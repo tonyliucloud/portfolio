@@ -5,6 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tony Liu</title>
+  <script>
+    function getDocHeight(doc) {
+      doc = doc || document;
+      var body = doc.body,
+        html = doc.documentElement;
+      var height = Math.max(body.scrollHeight, body.offsetHeight,
+        html.clientHeight, html.scrollHeight, html.offsetHeight);
+      return height;
+    }
+
+    function setIframeHeight(id) {
+      const ifrm = document.getElementById(id);
+      const doc = ifrm.contentDocument ? ifrm.contentDocument : ifrm.contentWindow.document;
+      ifrm.style.height = getDocHeight(doc) + 2 + "px";
+    }
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,7 +54,12 @@
       <h2>My Home Lab</h2>
       <button class="link-button" onclick=" window.open('https://status.tonyliu.cloud','_blank')">Status Page</button>
       <button class="link-button" onclick=" window.open('https://uptime.tonyliu.cloud','_blank')">Uptime Page</button>
-      <iframe src="https://status.tonyliu.cloud" width="1000" height="800"></iframe>
+      <iframe id='frame'
+       src='https://status.tonyliu.cloud'
+       onload='setIframeHeight(this.id);'
+       style='border:0px;vertical-align:bottom;width:100%;overflow:hidden;' 
+       target='_PARENT' marginwidth='0'
+       marginheight='0' frameborder='0' scrolling='no' ></iframe>
     </section>
 
     <section id="Projects" class="section Projects">
