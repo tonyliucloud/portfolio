@@ -205,7 +205,7 @@ export default function Home() {
             </main>
 
             <footer className="text-center text-gray-600 bg-black p-6">
-                © {new Date().getFullYear()} TONYLIU.CLOUD. All rights reserved.
+                © {new Date().getFullYear()} Tony-Liu.com | TonyLiu.cloud. All rights reserved.
             </footer>
         </>
     );
