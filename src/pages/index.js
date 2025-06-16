@@ -123,7 +123,7 @@ export default function Home() {
                         Hi, I'm Tony Liu
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-400 mb-10 animate-fadeIn delay-150">
-                        Full Stack Developer | {useTypewriter(phrases)} <span className="text-white blinking-cursor">|</span>
+                        Full Stack Learner | {useTypewriter(phrases)} <span className="text-white blinking-cursor">|</span>
                     </p>
                     <a
                         href="#projects"
